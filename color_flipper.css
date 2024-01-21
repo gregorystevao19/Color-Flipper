@@ -11,6 +11,54 @@
     box-shadow: 0 0 10px black;
 }
 
+.menu-mobile {
+    position: relative;
+    display: none;
+    cursor: pointer;
+}
+
+.menu-svg {
+    width: 30px;
+    height: 30px;
+}
+
+.menu-dropdown {
+    display: none;
+}
+
+.menu-mobile:hover .menu-dropdown {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: -20px;
+}
+
+.menu-dropdown-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 0 10px black;
+}
+
+.menu-dropdown-list-item {
+    font-size: 1.2rem;
+    font-style: none;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+    user-select: none;
+    text-wrap: nowrap;
+}
+
+.menu-dropdown-list-item:hover {
+    color: var(--Blue);
+}
+
 .title {
     font-size: 2rem;
     user-select: none;
@@ -31,9 +79,9 @@
     color: black;
     font-weight: bold;
     cursor: pointer;
-    transition: 
-    color 0.3s ease-in-out,
-    font-size 0.3s ease-in-out;
+    transition:
+        color 0.3s ease-in-out,
+        font-size 0.3s ease-in-out;
     user-select: none;
 }
 
@@ -82,9 +130,9 @@
     background-color: transparent;
     color: black;
     cursor: pointer;
-    transition: 
-    background-color 0.3s ease-in-out,
-    color 0.3s ease-in-out;
+    transition:
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out;
     letter-spacing: 5px;
     box-shadow: none;
 }
@@ -92,4 +140,21 @@
 .button-flipper:hover {
     background-color: black;
     color: white;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .span {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }

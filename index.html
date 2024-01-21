@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,23 +8,34 @@
     <link rel="stylesheet" href="color_flipper.css">
     <title>Color Flipper</title>
 </head>
+
 <body>
-    
+
     <header class="header">
         <h1 class="title">Color Flipper</h1>
-        <nav>
+        <nav class="navbar">
             <ul class="navbar-list">
-                <li id="primary" class="navbar-list-item">Primary Colors</li>
-                <li id="hex" class="navbar-list-item">Hex Colors</li>
+                <li class="navbar-list-item primary">Primary Colors</li>
+                <li class="navbar-list-item hex">Hex Colors</li>
             </ul>
         </nav>
+        <div class="menu-mobile">
+            <img class="menu-svg" src="public/bars-solid.svg">
+            <div class="menu-dropdown">
+                <ul class="menu-dropdown-list">
+                    <li class="menu-dropdown-list-item primary">Primary Colors</li>
+                    <li class="menu-dropdown-list-item hex">Hex Colors</li>
+                </ul>
+            </div>
+        </div>
     </header>
 
     <main class="main">
         <span class="span">Background Color: <span id="color-code" class="span-color-code">#f0f8ff</span></span>
         <button id="button-flipper" type="button" class="button-flipper">Click Me!</button>
     </main>
-    
+
     <script src="script.js"></script>
 </body>
+
 </html>

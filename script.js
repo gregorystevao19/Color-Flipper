@@ -4,15 +4,20 @@ const primaryColors = ['red', 'green', 'blue'];
 let primaryOption = false;
 let hexOption = true;
 
-const buttonPrimary = document.querySelector('#primary');
-buttonPrimary.addEventListener('click', () => {
-    [primaryOption, hexOption] = changeArrayColorOption();
-})
+const buttonPrimary = document.getElementsByClassName('primary');
+for (let i = 0; i < buttonPrimary.length; i++) {
+    buttonPrimary[i].addEventListener('click', () => {
+        [primaryOption, hexOption] = changeArrayColorOption();
+    })
+}
 
-const buttonHex = document.querySelector('#hex');
-buttonHex.addEventListener('click', () => {
-    [hexOption, primaryOption] = changeArrayColorOption();
-})
+const buttonHex = document.getElementsByClassName('hex');
+for (let i = 0; i < buttonHex.length; i++) {
+    buttonHex[i].addEventListener('click', () => {
+        [hexOption, primaryOption] = changeArrayColorOption();
+    })
+
+}
 
 const main = document.querySelector('main');
 const colorCode = document.querySelector('#color-code');
